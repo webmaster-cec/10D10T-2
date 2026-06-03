@@ -137,7 +137,7 @@ const Footer = () => {
                   key={social.name}
                   href={social.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   whileHover={{ scale: 1.1, backgroundColor: "white" }}
                   whileTap={{ scale: 0.95 }}
                   className="w-10 h-10 rounded-xl border border-white/5 flex items-center justify-center text-white/40 hover:text-black transition-colors bg-white/5"

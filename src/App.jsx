@@ -14,6 +14,14 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Update document title for better SEO
+    const titles = {
+      '/': '10D 10T II',
+      '/tasks': 'Tasks | 10D 10T II',
+      '/leaderboard': 'Leaderboard | 10D 10T II'
+    };
+    document.title = titles[pathname] || '10D 10T 2.0 | IEEE RAS CEC';
+
     if (pathname === '/tasks' || pathname === '/leaderboard') {
       window.scrollTo(0, 0);
     }

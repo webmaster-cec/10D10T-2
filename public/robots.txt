@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /$
+Disallow: /
+
+Sitemap: https://10d10t.cecieee.org/sitemap.xml

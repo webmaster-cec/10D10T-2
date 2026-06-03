@@ -197,6 +197,8 @@ const Navbar = () => {
           </Link> */}
           <a
             href="https://forms.gle/zYd65ByWERiwBByY9"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             className="group hidden sm:flex items-center gap-3 px-6 py-2 text-white border border-white/70 hover:bg-white hover:text-black transition-all duration-500 rounded-sm"
           >
             <span className="text-xs py-2 font-black font-title uppercase tracking-[0.3em]">Register Now</span>
