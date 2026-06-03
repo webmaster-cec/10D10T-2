@@ -29,37 +29,37 @@ const Rules = () => {
         {
             id: "01",
             title: "Task Deadlines",
-            desc: "Submit each task on time; late entries won't be accepted.",
+            desc: "Submit all tasks before the specified deadline. Late entries will not be accepted.",
             context: "TIME PROTOCOL"
         },
         {
             id: "02",
             title: "Scoring System",
-            desc: "Tasks come with points based on difficulty, which contribute to your final score.",
+            desc: "Each task carries points based on its complexity, contributing to your overall ranking.",
             context: "QUANTUM REWARD"
         },
         {
             id: "03",
             title: "Task Requirements",
-            desc: "Each task has specific requirements; stick to the format provided.",
+            desc: "Adhere to the instructions, criteria, and submission format outlined for each task.",
             context: "FORMAT STRICT"
         },
         {
             id: "04",
             title: "Judging Decisions",
-            desc: "The evaluation by the judging panel is absolute.",
+            desc: "All evaluations and decisions made by the judging panel are final and binding.",
             context: "FINAL VERDICT"
         },
         {
             id: "05",
             title: "Conduct",
-            desc: "Maintain respectful conduct throughout the competition.",
-            context: "SOCIAL_SYNC"
+            desc: "Maintain professionalism, integrity, and respect throughout the competition.",
+            context: "SOCIAL SYNC"
         },
         {
             id: "06",
             title: "Submission Limit",
-            desc: "Only one submission per task is allowed unless specified in the guidelines.",
+            desc: "Only one submission per task is permitted unless otherwise stated in the guidelines.",
             context: "ENTRY RESTRICT"
         },
     ], []);

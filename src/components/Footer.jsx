@@ -74,8 +74,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { name: 'Ashna Sunil', phone: '+91 9188821690' },
-    { name: 'Rishikesh J', phone: '+91 9496770497' },
+    { name: 'Parvathy', phone: '+91 7034742769' },
+    { name: 'Jotham', phone: '+91 79075 81263' },
   ];
 
   const containerVariants = {

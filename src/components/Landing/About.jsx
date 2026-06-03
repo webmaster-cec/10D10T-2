@@ -161,9 +161,9 @@ const About = () => {
                             </div>
                             <div className="flex flex-col justify-center">
                                 <p className="font-body text-base lg:text-lg text-white/60 leading-relaxed font-light text-justify md:text-left">
-                                    <span className="text-white font-medium">IEEE RAS College of Engineering Chengannur</span>, proudly presents 10D 10T, an electrifying 10-days, 10-tasks competition designed to challenge and inspire.
+                                    <span className="text-white font-semibold">IEEE RAS College of Engineering, Chengannur</span> proudly presents <span className="text-white font-semibold">10D 10T 2.0</span> - an exciting 10-day, 10-task challenge crafted to push your limits and spark innovation.
                                     <br /><br />
-                                    Over ten days, participants will tackle diverse challenges, spanning robotics, coding, debugging and automation, refining their abilities through real-world problem-solving. Each day brings a new task, a fresh opportunity to prove your innovation, adaptability, and technical skills.
+                                    Across ten days, participants will take on a variety of hands-on challenges in robotics, coding, debugging, and automation. This journey is designed to sharpen real-world problem-solving skills and elevate technical expertise.
                                 </p>
                             </div>
                         </div>
@@ -182,15 +182,15 @@ const About = () => {
                                 <ul className="space-y-4 font-body text-base lg:text-lg text-white/60 font-light list-none">
                                     <li className="flex gap-4">
                                         <span className="text-white/20">01</span>
-                                        <span>Unique tasks daily, spanning <span className="text-white/80">Coding</span>, <span className="text-white/80">Robotics</span>, and <span className="text-white/80">Automation</span>.</span>
+                                        <span>Unique tasks daily, spanning <span className="text-white font-semibold">Coding</span>, <span className="text-white font-semibold">Robotics</span>, and <span className="text-white font-semibold">Automation</span>.</span>
                                     </li>
                                     <li className="flex gap-4">
                                         <span className="text-white/20">02</span>
-                                        <span>Open to <span className="text-white/80">all college students</span> — a platform for beginners and experts alike.</span>
+                                        <span>Open to <span className="text-white font-semibold">all college students</span> — a platform for beginners and experts alike.</span>
                                     </li>
                                     <li className="flex gap-4">
                                         <span className="text-white/20">03</span>
-                                        <span>High-energy community and technical challenges that <span className="text-white/80">sharpen insight</span>.</span>
+                                        <span>High-energy community and technical challenges that <span className="text-white font-semibold">sharpen insight</span>.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -207,7 +207,9 @@ const About = () => {
                             </div>
                             <div className="flex flex-col justify-center">
                                 <p className="font-body text-base lg:text-lg text-white/60 leading-relaxed font-light border-l border-white/10 pl-6 italic">
-                                    "10D 10T is more than just a test of skills; it's a journey of growth, persistence, and problem-solving. Develop your expertise and engage with real-world challenges in the digital cosmos."
+                                    10D 10T 2.0 is more than just a competition - it’s a transformative experience.
+                                    <br /><br />
+                                    It’s a path of growth, resilience, and continuous learning. Enhance your skills, tackle real-world problems, and immerse yourself in a dynamic tech-driven environment.
                                 </p>
                             </div>
                             <div className="hidden md:block"></div> {/* Space for Earth in C3 */}
@@ -244,9 +246,9 @@ const About = () => {
                             <span className="text-[10px] tracking-[0.5em] uppercase text-blue-400/80 mb-3 block font-medium">Information</span>
                             <h2 className="font-title text-4xl text-white uppercase leading-none mb-5">About Us</h2>
                             <p className="font-body text-sm text-white/80 leading-relaxed font-light">
-                                <span className="text-white font-medium">IEEE RAS College of Engineering Chengannur</span>, proudly presents 10D 10T, an electrifying 10-days, 10-tasks competition designed to challenge and inspire.
+                                <span className="text-white font-semibold">IEEE RAS College of Engineering, Chengannur</span> proudly presents <span className="text-white font-semibold">10D 10T 2.0</span> - an exciting 10-day, 10-task challenge crafted to push your limits and spark innovation.
                                 <br /><br />
-                                Over ten days, participants will tackle diverse challenges, spanning robotics, coding, debugging and automation, refining their abilities through real-world problem-solving.
+                                Across ten days, participants will take on a variety of hands-on challenges in robotics, coding, debugging, and automation. This journey is designed to sharpen real-world problem-solving skills and elevate technical expertise.
                             </p>
                         </div>
                     </div>
@@ -276,11 +278,11 @@ const About = () => {
                             <ul className="space-y-5 font-body text-sm text-white/80 font-light list-none">
                                 <li className="flex gap-4 items-start">
                                     <span className="text-white/30 font-title text-lg mt-[-2px]">01</span>
-                                    <span>Unique tasks daily, spanning <span className="text-white font-medium">Coding</span>, <span className="text-white font-medium">Robotics</span>, and <span className="text-white font-medium">Automation</span>.</span>
+                                    <span>Unique tasks daily, spanning <span className="text-white font-semibold">Coding</span>, <span className="text-white font-semibold">Robotics</span>, and <span className="text-white font-semibold">Automation</span>.</span>
                                 </li>
                                 <li className="flex gap-4 items-start">
                                     <span className="text-white/30 font-title text-lg mt-[-2px]">02</span>
-                                    <span>Open to <span className="text-white font-medium">all college students</span>.</span>
+                                    <span>Open to <span className="text-white font-semibold">all college students</span>.</span>
                                 </li>
                                 <li className="flex gap-4 items-start">
                                     <span className="text-white/30 font-title text-lg mt-[-2px]">03</span>
@@ -304,7 +306,9 @@ const About = () => {
                         <h2 className="font-title text-4xl text-white uppercase leading-none mb-6">Why Join?</h2>
                         <div className="w-12 h-[1px] bg-emerald-500/50 mb-6"></div>
                         <p className="font-body text-sm text-white/80 leading-relaxed font-light italic">
-                            "10D 10T is more than just a test of skills; it's a journey of growth, persistence, and problem-solving. Develop your expertise and engage with real-world challenges in the digital cosmos."
+                            10D 10T 2.0 is more than just a competition - it’s a transformative experience.
+                            <br /><br />
+                            It’s a path of growth, resilience, and continuous learning. Enhance your skills, tackle real-world problems, and immerse yourself in a dynamic tech-driven environment.
                         </p>
                     </div>
                 </div>
