@@ -254,6 +254,7 @@ const Tasks = () => {
                                   <motion.button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
+                                    onClick={() => task['Submission Link'] && window.open(task['Submission Link'], '_blank')}
                                     className="mt-4 md:mt-0 md:ml-auto w-full md:w-auto px-8 py-3 bg-white hover:bg-black hover:text-white border border-black hover:border-white text-black font-black uppercase tracking-[0.2em] text-[10px] shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-transform flex items-center justify-center gap-3"
                                   >
                                     Submit
@@ -344,6 +345,10 @@ const Tasks = () => {
                               <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (task['Submission Link']) window.open(task['Submission Link'], '_blank');
+                                }}
                                 className="w-full py-3 bg-white hover:bg-black text-black hover:text-white border border-black font-title text-sm font-bold uppercase tracking-widest shadow-lg transition-colors flex items-center justify-center gap-3 rounded-[16px]"
                               >
                                 Submit Task

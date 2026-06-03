@@ -56,8 +56,10 @@ const TaskCard = ({ task, compact = false }) => {
         </div>
 
         {!isLocked && isActive && (
-          <Link
-            to="/tasks"
+          <a
+            href={task['Submission Link']}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative px-8 py-3 group/btn cursor-pointer overflow-hidden transition-all duration-300 block"
           >
             {/* Background Hover Effect */}
@@ -68,9 +70,9 @@ const TaskCard = ({ task, compact = false }) => {
 
             {/* Text */}
             <span className="relative z-10 text-[9px] font-mono text-white/90 uppercase tracking-[0.4em] group-hover/btn:text-black transition-colors duration-300">
-              Access_Archive
+              Submit_Task
             </span>
-          </Link>
+          </a>
         )}
       </div>
     </div>

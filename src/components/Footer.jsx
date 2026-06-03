@@ -74,8 +74,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { name: 'Parvathy', phone: '+91 7034742769' },
-    { name: 'Jotham', phone: '+91 79075 81263' },
+    { name: 'Parvathy Vinayan', phone: '+91 7034742769' },
+    { name: 'Jotham K Philip', phone: '+91 79075 81263' },
   ];
 
   const containerVariants = {
