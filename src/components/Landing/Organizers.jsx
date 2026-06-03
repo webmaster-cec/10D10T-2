@@ -1,5 +1,5 @@
 import React from 'react';
-import ieeeLogo from '../../assets/images/ieee_sb_cec_logo_white.png';
+import ieeeLogo from '../../assets/images/SB-logo30.png';
 import rasLogo from '../../assets/images/RAS-white.png';
 
 const Organizers = () => {
