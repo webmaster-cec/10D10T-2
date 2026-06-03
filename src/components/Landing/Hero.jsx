@@ -211,9 +211,9 @@ const Hero = () => {
                             <div className="absolute inset-[2px] bg-black/40 backdrop-blur-md rounded-xl transition-colors duration-900 group-hover:bg-white cursor-pointer" />
                             
                             {/* Text */}
-                            <span className="relative cursor-pointer z-10 font-title text-sm md:text-base text-white/90 uppercase font-bold transition-all duration-500 group-hover:text-black tracking-[0.29em] flex items-center gap-2">
+                            <a href="https://forms.gle/zYd65ByWERiwBByY9" className="relative cursor-pointer z-10 font-title text-sm md:text-base text-white/90 uppercase font-bold transition-all duration-500 group-hover:text-black tracking-[0.29em] flex items-center gap-2">
                                 Register Now
-                            </span>
+                            </a>
                         </button>
                     </div>
                 </div>
