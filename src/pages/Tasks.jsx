@@ -6,6 +6,8 @@ import SpaceBackground from '../components/Backgrounds/SpaceBackground';
 import { Box, List, LayoutGrid, Send } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ComingSoon from '../components/ComingSoon';
+import { isEventStarted } from '../constants';
 
 const AnimatedCounter = ({ value, className }) => {
   const nodeRef = useRef(null);
@@ -51,6 +53,14 @@ const Tasks = () => {
     
     return () => clearTimeout(timer);
   }, [tasks]);
+
+  if (!isEventStarted()) {
+    return (
+      <div className="min-h-screen bg-black pt-32">
+        <ComingSoon id="tasks" title="Tasks" />
+      </div>
+    );
+  }
 
   if (loading) {
     return (

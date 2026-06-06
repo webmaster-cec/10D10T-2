@@ -9,6 +9,8 @@ import TasksPreview from '../components/Landing/TasksPreview';
 import Rules from '../components/Landing/Rules';
 import Organizers from '../components/Landing/Organizers';
 import starsImage from '../assets/images/Hero.webp';
+import ComingSoon from '../components/ComingSoon';
+import { isEventStarted } from '../constants';
 
 
 const Landing = () => {
@@ -52,15 +54,26 @@ const Landing = () => {
         <Countdown />
 
         <div id="about"><About /></div>
-        <div id="tasks"><TasksPreview /></div>
-        <div id="rules" className="bg-black"><Rules /></div>
+        
+        {isEventStarted() ? (
+          <>
+            <div id="tasks"><TasksPreview /></div>
+            <div id="rules" className="bg-black"><Rules /></div>
 
-        {/* 5. LEADERBOARD */}
-        <section id="leaderboard" className="relative z-10 bg-black">
-          <div className="w-full">
-            <LeaderboardSection isLanding={true} data={lbData} loading={lbLoading} error={lbError} refresh={lbRefresh} />
-          </div>
-        </section>
+            {/* 5. LEADERBOARD */}
+            <section id="leaderboard" className="relative z-10 bg-black">
+              <div className="w-full">
+                <LeaderboardSection isLanding={true} data={lbData} loading={lbLoading} error={lbError} refresh={lbRefresh} />
+              </div>
+            </section>
+          </>
+        ) : (
+          <>
+            <ComingSoon id="tasks" title="Tasks" />
+            <div id="rules" className="bg-black"><Rules /></div>
+            <ComingSoon id="leaderboard" title="Leaderboard" />
+          </>
+        )}
 
         <div id="organizers"><Organizers /></div>
       </div>
