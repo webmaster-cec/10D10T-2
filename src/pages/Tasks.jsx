@@ -6,8 +6,7 @@ import SpaceBackground from '../components/Backgrounds/SpaceBackground';
 import { Box, List, LayoutGrid, Send } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ComingSoon from '../components/ComingSoon';
-import { isEventStarted } from '../constants';
+
 
 const AnimatedCounter = ({ value, className }) => {
   const nodeRef = useRef(null);
@@ -54,13 +53,7 @@ const Tasks = () => {
     return () => clearTimeout(timer);
   }, [tasks]);
 
-  if (!isEventStarted()) {
-    return (
-      <div className="min-h-screen bg-black pt-32">
-        <ComingSoon id="tasks" title="Tasks" />
-      </div>
-    );
-  }
+
 
   if (loading) {
     return (
@@ -246,9 +239,14 @@ const Tasks = () => {
                             className="overflow-hidden bg-white/[0.01]"
                           >
                             <div className="px-6 md:px-8 pb-8 md:pb-10 pl-10 md:pl-28 max-w-4xl">
-                              <p className="text-sm md:text-xl text-white group-hover:text-zinc-800 transition-colors duration-500 font-body leading-relaxed mb-8 md:mb-10 selection:bg-white selection:text-black break-words">
-                                {task.Description}
-                              </p>
+                              <div className="text-sm md:text-xl text-white group-hover:text-zinc-800 transition-colors duration-500 font-body leading-relaxed mb-8 md:mb-10 selection:bg-white selection:text-black break-words">
+                                {task.Description?.split('\n').filter(line => line.trim() !== '').map((line, i) => (
+                                  <div key={i} className="flex items-start gap-3 mb-3">
+                                    <span className="text-white/40 group-hover:text-zinc-400 transition-colors duration-500 text-lg leading-none mt-1">•</span>
+                                    <span>{line.trim()}</span>
+                                  </div>
+                                ))}
+                              </div>
 
                               <div className="flex flex-wrap items-center gap-x-6 md:gap-x-12 gap-y-4 text-[8px] md:text-[11px] font-body text-white/20 uppercase tracking-[0.2em] md:tracking-[0.3em]">
                                 <div className="flex items-center gap-2">
@@ -339,9 +337,20 @@ const Tasks = () => {
                           <h3 className="text-3xl md:text-4xl font-title uppercase leading-[1.1] mb-4 text-white group-hover:text-black transition-colors duration-300">
                             {isFuture ? 'PROTECTED' : task.Title}
                           </h3>
-                          <p className="text-xs md:text-sm text-zinc-400 group-hover:text-zinc-600 font-body leading-relaxed line-clamp-3 transition-colors duration-300">
-                            {isFuture ? 'Unauthorized access attempt detected. Data stream severed.' : task.Description}
-                          </p>
+                          <div className="text-xs md:text-sm text-zinc-400 group-hover:text-zinc-600 font-body leading-relaxed transition-colors duration-300">
+                            {isFuture ? (
+                              <p>'Unauthorized access attempt detected. Data stream severed.'</p>
+                            ) : (
+                              <div>
+                                {task.Description?.split('\n').filter(line => line.trim() !== '').map((line, i) => (
+                                  <div key={i} className="flex items-start gap-2 mb-1.5">
+                                    <span className="text-zinc-600/50 group-hover:text-zinc-400 transition-colors duration-300 text-sm leading-none mt-0.5">•</span>
+                                    <span>{line.trim()}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
 
                         {!isFuture && (

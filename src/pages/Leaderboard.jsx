@@ -2,19 +2,12 @@ import React from 'react';
 import { useLeaderboardData } from '../hooks/useLeaderboardData';
 import LeaderboardSection from '../components/LeaderboardSection';
 import starsImage from '../assets/images/Hero.webp';
-import ComingSoon from '../components/ComingSoon';
-import { isEventStarted } from '../constants';
+
 
 const Leaderboard = () => {
   const { data, loading, error, refresh, lastUpdated } = useLeaderboardData();
 
-  if (!isEventStarted()) {
-    return (
-      <div className="min-h-screen bg-black pt-32">
-        <ComingSoon id="leaderboard" title="Leaderboard" />
-      </div>
-    );
-  }
+
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden selection:bg-white/20">
