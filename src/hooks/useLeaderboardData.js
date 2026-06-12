@@ -35,7 +35,7 @@ function parseCSV(text) {
       Score: row['Total Score'] || row['Score'],
       Rank: row['Rank']
     };
-  });
+  }).filter(item => item.Name && item.Name !== '#N/A');
 }
 
 export function useLeaderboardData() {

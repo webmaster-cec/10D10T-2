@@ -222,8 +222,74 @@ const LeaderboardSection = ({ data, loading, error, refresh, lastUpdated, isLand
             <div className="bg-black border-none md:border-solid md:border border-white/10 md:rounded-xl overflow-hidden md:backdrop-blur-md w-full">
               {loading ? (
                 <div className="p-20"><TableSkeleton /></div>
-              ) : (
+              ) : data && data.length > 0 ? (
                 <LandingLeaderboardBento data={isLanding ? data.slice(0, 5) : tableData} />
+              ) : (
+                <div className="relative w-full py-24 md:py-40 flex flex-col items-center justify-center overflow-hidden bg-zinc-950/30 rounded-xl md:rounded-3xl border border-white/5">
+                  {/* Background pulses */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <motion.div 
+                      animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.15, 0.05] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-64 h-64 md:w-96 md:h-96 rounded-full bg-yellow-500/10 blur-3xl"
+                    />
+                  </div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative z-10 flex flex-col items-center text-center px-6"
+                  >
+                    {/* Animated Icon */}
+                    <div className="relative mb-8">
+                      <motion.div 
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        className="absolute inset-0 border border-dashed border-yellow-500/30 rounded-full scale-125"
+                      />
+                      <motion.div 
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                        className="absolute inset-0 border border-white/10 rounded-full scale-[1.4]"
+                      />
+                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-black border border-yellow-500/20 shadow-[0_0_30px_rgba(234,179,8,0.1)] flex items-center justify-center overflow-hidden">
+                        <motion.div
+                          animate={{ y: [0, -5, 0] }}
+                          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                          className="text-4xl md:text-5xl"
+                        >
+                          🛰️
+                        </motion.div>
+                      </div>
+                    </div>
+
+                    <h3 className="text-3xl md:text-5xl font-title uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-yellow-100 to-yellow-600 mb-4 tracking-wider drop-shadow-sm">
+                      Awaiting Data
+                    </h3>
+                    
+                    <div className="w-12 h-px bg-yellow-500/50 mb-6"></div>
+
+                    <p className="text-sm md:text-base text-zinc-400 font-body max-w-lg mx-auto leading-relaxed">
+                      The mainframe is currently processing the latest scores. Stay tuned as we compile the definitive rankings for this mission.
+                    </p>
+
+                    {/* Progress / Loading bar mockup */}
+                    <div className="mt-10 w-full max-w-[200px] mx-auto">
+                      <div className="flex justify-between text-[9px] text-zinc-500 font-bold tracking-[0.2em] mb-3 uppercase">
+                        <span>Syncing</span>
+                        <span className="animate-pulse text-yellow-500">Processing</span>
+                      </div>
+                      <div className="w-full h-0.5 bg-white/10 rounded-full overflow-hidden">
+                        <motion.div 
+                          className="h-full bg-gradient-to-r from-transparent via-yellow-500 to-transparent w-[50%]"
+                          animate={{ x: ['-100%', '200%'] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               )}
 
               {isLanding && (
