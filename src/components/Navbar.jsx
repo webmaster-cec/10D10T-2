@@ -188,14 +188,14 @@ const Navbar = () => {
 
         {/* Action / Terminal */}
         <div className="flex items-center gap-4">
-          {/* <Link
+          <Link
             to="/tasks"
             className="group hidden sm:flex items-center gap-3 px-6 py-2 text-white border border-white/70 hover:bg-white hover:text-black transition-all duration-500 rounded-sm"
           >
-            <span className="text-xs py-2 font-black font-title uppercase tracking-[0.3em]">Register Now</span>
+            <span className="text-xs py-2 font-black font-title uppercase tracking-[0.3em]">CHALLENGES</span>
             <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link> */}
-          <a
+          </Link>
+          {/* <a
             href="https://forms.gle/zYd65ByWERiwBByY9"
             target="_blank"
             rel="noopener noreferrer nofollow"
@@ -203,7 +203,7 @@ const Navbar = () => {
           >
             <span className="text-xs py-2 font-black font-title uppercase tracking-[0.3em]">Register Now</span>
             <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </a> */}
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -301,21 +301,21 @@ const Navbar = () => {
               exit={{ opacity: 0, y: 20, transition: { delay: 0, duration: 0.3 } }}
               className="mt-auto mb-8 w-full relative z-20"
             >
-              {/* <Link
+              <Link
                 to="/tasks"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-3 w-full bg-white text-black py-4 rounded-xl hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
-                <span className="text-xs font-bold font-body tracking-[0.3em] uppercase">Register Now</span>
+                <span className="text-xs font-bold font-body tracking-[0.3em] uppercase">Challenges</span>
                 <ArrowUpRight size={16} />
-              </Link> */}
-              <a
+              </Link>
+              {/* <a
                 href="https://forms.gle/zYd65ByWERiwBByY9"
                 className="flex items-center justify-center gap-3 w-full bg-white text-black py-4 rounded-xl hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
                 <span className="text-xs font-bold font-body tracking-[0.3em] uppercase">Register Now</span>
                 <ArrowUpRight size={16} />
-              </a>
+              </a> */}
             </motion.div>
           </motion.div>
         )}

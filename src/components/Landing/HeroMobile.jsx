@@ -7,6 +7,7 @@ import starsImage from '../../assets/images/Hero.webp';
 import BlurText from '../BlurText';
 import ShootingStars from '../Backgrounds/ShootingStars';
 import SpaceBackground from '../Backgrounds/SpaceBackground';
+import {Link} from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -212,9 +213,12 @@ const HeroMobile = () => {
                             <div className="absolute inset-[2px] bg-black/40 backdrop-blur-md rounded-[10px] transition-colors duration-500 group-hover:bg-black/90 pointer-events-none" />
                             
                             {/* Text */}
-                            <a href="https://forms.gle/zYd65ByWERiwBByY9" className="relative z-10 font-heading text-xs tracking-[0.5em] text-white/90 uppercase font-bold transition-all duration-500 group-hover:text-white group-hover:tracking-[0.65em] flex items-center gap-2 group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                            {/* <a href="https://forms.gle/zYd65ByWERiwBByY9" className="relative z-10 font-heading text-xs tracking-[0.5em] text-white/90 uppercase font-bold transition-all duration-500 group-hover:text-white group-hover:tracking-[0.65em] flex items-center gap-2 group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
                                 Register Now
-                            </a>
+                            </a> */}
+                            <Link to="/tasks" className="relative cursor-pointer z-10 font-title text-sm md:text-base text-white/90 uppercase font-bold transition-all duration-500 group-hover:text-black tracking-[0.29em] flex items-center gap-2">
+                                Challenges
+                            </Link>
                         </button>
                     </div>
                 </div>
