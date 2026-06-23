@@ -81,7 +81,7 @@ const Tasks = () => {
 
   const currentActiveIdx = tasks?.findIndex(t => t['Current Status'] === 'Active') ?? -1;
   const activeCount = currentActiveIdx > -1 ? 1 : 0;
-  const expiredCount = currentActiveIdx > -1 ? currentActiveIdx : (tasks?.length || 0);
+  const expiredCount = currentActiveIdx > -1 ? currentActiveIdx : (tasks?.filter(t => t['Current Status'] === 'Expired').length || 0);
   const leftCount = tasks ? tasks.length - expiredCount - activeCount : 0;
 
   return (
@@ -162,7 +162,7 @@ const Tasks = () => {
             >
               <div className="max-w-4xl mx-auto space-y-6">
                 {tasks?.map((task, idx) => {
-                  const isFuture = idx > currentActiveIdx;
+                  const isFuture = currentActiveIdx !== -1 ? idx > currentActiveIdx : task['Current Status'] === 'Locked';
                   const isActive = idx === activeDay;
                   const isLive = task['Current Status'] === 'Active';
 
@@ -299,7 +299,7 @@ const Tasks = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 {tasks?.map((task, idx) => {
-                  const isFuture = idx > currentActiveIdx;
+                  const isFuture = currentActiveIdx !== -1 ? idx > currentActiveIdx : task['Current Status'] === 'Locked';
                   const isLive = task['Current Status'] === 'Active';
 
                   return (
